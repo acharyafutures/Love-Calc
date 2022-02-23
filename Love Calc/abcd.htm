@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculate your Love!</title>
+    <link rel="shortcut icon" type="image/png" href="fav.png">
+</head>
+<style type="text/css">
+    body {
+        background-color: aqua;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin: 2%;
+    }
+    
+    .top {
+        color: blue;
+        display: inline-block;
+        margin-bottom: 3%;
+        margin-right: auto;
+        margin-left: 35%;
+        font-size: 1.3vw;
+        text-align: center;
+    }
+    
+    .main {
+        background-image: url("abc.jpg");
+        background-size: cover;
+        object-position: center;
+        padding: 4%;
+        border-radius: 15px;
+        color: black;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 1.2vw;
+        height: 90%;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    input {
+        width: 45%;
+        height: auto;
+    }
+    
+    .row {
+        height: 100%;
+        width: auto;
+    }
+    
+    p {
+        background-color: aqua;
+        border-radius: 50px;
+        color: black;
+        font-size: 3vw;
+        text-align: center;
+        width: 6em;
+        object-position: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<body>
+    <div class="row">
+        <div class="top">
+            <h1>Does He/She Loves You?</h1>
+        </div>
+        <div class="main">
+            Enter First Name &nbsp;<br> <input type="text" id="Name1" placeholder="Your Name!" onfocus="thevalue=''"><br><br><br> Enter Second Name &nbsp;<br> <input type="text" id="Name2" placeholder="Your Crush's Name!" onfocus="thevalue=''"><br><br><br>
+            <button onclick="console.log(khoikhoi(60,100)); document.getElementById('Result').innerHTML= khoikhoi(60,100); feri()">Calculate
+		</button><br>
+            <br>
+            <p id="Result" onclick="banda();">
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function khoikhoi(a, b) {
+            x = document.getElementById('Name1').value;
+            y = document.getElementById('Name2').value;
+            if (x.length < 1) {
+                alert('Please Enter The Data!');
+            } else if (y.length < 1) {
+                alert('Please Enter The Data!');
+            } else {
+                return Math.floor(Math.random() * (b - a)) + a + " " + "%";
+            }
+        }
+
+        function banda() {
+            document.getElementById('Result').style.display = 'block';
+        }
+
+        function feri() {
+            document.getElementById('Result').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
